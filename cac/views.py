@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 
-#views.py contiene todas las logicas del negocio.
+#views.py contiene toda la logica del negocio.
