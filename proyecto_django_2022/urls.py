@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from cac.views import saludo_modificado
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("saludo/<int:edad>", saludo_modificado)
 ]
+
