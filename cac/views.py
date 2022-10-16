@@ -6,6 +6,8 @@ from django.http import HttpResponse
 
 #views.py contiene toda la logica del negocio.
 
+#Todo bien
+
 
 def saludo( request ):
     return HttpResponse("Hola a todos!")
