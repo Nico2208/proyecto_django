@@ -4,6 +4,8 @@ from . import views
 
 urlpatterns = [
     path("hola/", views.saludo), 
-    path("saludo/<int:edad>", views.saludo_modificado)
+    path("saludo/<str:nombre>/<int:edad>", views.saludo_modificado),
+    path("saludar/<str:nombre>", views.saludar, name="saludar"), #Agrego un alias al path
+    path("saludar/", views.saludar)
 ]
 

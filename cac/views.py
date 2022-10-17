@@ -16,6 +16,12 @@ def saludo (request):
 #Request es un objeto que recibe las peticiones del usuario. Tiene informacion respecto al tipo de peticion que es.
 #HttpResponse me permite devolver respuestas desde el servidor     
 
-def saludo_modificado( request, edad ):
-    documento = "<html><body><h2>Hola tenes %s anios"%(edad)
-    return HttpResponse(documento)    
+def saludo_modificado( request, nombre, edad ):
+    documento = f"<html><body><h2>Hola {nombre}, tenes {edad} años"
+    return HttpResponse(documento)
+
+
+def saludar(request, nombre='Nico'):
+    return HttpResponse(f"""
+        <h1>Hola mundo Django - Un gusto {nombre}</h1>
+    """)    
