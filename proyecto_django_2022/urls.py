@@ -15,13 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from cac.views import saludo_modificado
+from django.urls.conf import include
 
 #Manejador de rutas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("saludo/<int:edad>", saludo_modificado)
+    path('', include('cac.urls'))
 ]
 
