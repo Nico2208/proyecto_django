@@ -18,6 +18,8 @@ from django.urls import path
 
 from cac.views import saludo_modificado
 
+#Manejador de rutas
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("saludo/<int:edad>", saludo_modificado)
