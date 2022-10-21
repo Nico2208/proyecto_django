@@ -24,4 +24,7 @@ def saludo_modificado( request, nombre, edad ):
 def saludar(request, nombre='Nico'):
     return HttpResponse(f"""
         <h1>Hola mundo Django - Un gusto {nombre}</h1>
-    """)    
+    """)
+
+def cursos_detalle(request, nombre_curso):
+    return HttpResponse( f'{ nombre_curso }' )    

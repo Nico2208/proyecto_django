@@ -21,6 +21,6 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cac/', include('cac.urls'))
+    path('cac/', include('cac.urls')) #include de las rutas de urls.py de la app cac 
 ]
 
