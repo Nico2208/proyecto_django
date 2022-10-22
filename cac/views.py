@@ -28,3 +28,10 @@ def saludar(request, nombre='Nico'):
 
 def cursos_detalle(request, nombre_curso):
     return HttpResponse( f'{ nombre_curso }' )    
+
+def curso(request, nombre_categoria):
+    return HttpResponse( f'{ nombre_categoria }' ) 
+
+
+def mostrar_proyecto(request, anio):
+    return HttpResponse( f'{anio}' )
