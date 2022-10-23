@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from django.http import HttpResponse
+
+from django.urls import reverse
 
 # Create your views here.
 
@@ -8,6 +10,10 @@ from django.http import HttpResponse
 
 #Todo bien
 
+def index( request ):
+    return HttpResponse( f"""
+        <h1>Hola mundo Django</h1>
+    """ )
 
 def saludo (request):
     return HttpResponse("Hola a todos!")
@@ -35,3 +41,8 @@ def curso(request, nombre_categoria):
 
 def mostrar_proyecto(request, anio):
     return HttpResponse( f'{anio}' )
+
+
+def quienes_somos( request ):
+    #return redirect("saludo_modificado")
+    return redirect( reverse( "saludar", kwargs={ "nombre": "Nicolas" } ) )
