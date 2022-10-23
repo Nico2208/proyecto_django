@@ -11,8 +11,12 @@ from django.urls import reverse
 #Todo bien
 
 def index( request ):
+    if( request.method == 'GET' ):
+        titulo = "Titulo GET"
+    else:
+        titulo = f"Titulo {titulo}"
     return HttpResponse( f"""
-        <h1>Hola mundo Django</h1>
+        <h1>Holaj</h1>
     """ )
 
 def saludo (request):
