@@ -16,7 +16,7 @@ def index( request ):
     else:
         titulo = f"Titulo {titulo}"
     return HttpResponse( f"""
-        <h1>Holaj</h1>
+        <h1>Hola</h1>
     """ )
 
 def saludo (request):
@@ -50,3 +50,6 @@ def mostrar_proyecto(request, anio):
 def quienes_somos( request ):
     #return redirect("saludo_modificado")
     return redirect( reverse( "saludar", kwargs={ "nombre": "Nicolas" } ) )
+
+def index_saludo(request):
+    return render(request, "index.html", {"nombre": "Nicolas"})
