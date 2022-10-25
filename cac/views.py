@@ -12,12 +12,10 @@ from django.urls import reverse
 
 def index( request ):
     if( request.method == 'GET' ):
-        titulo = "Titulo GET"
+        titulo = "Titulo cuando accedo por el metodo GET"
     else:
-        titulo = f"Titulo {titulo}"
-    return HttpResponse( f"""
-        <h1>Hola</h1>
-    """ )
+        titulo = f"Titulo {request.method}"
+    return render()
 
 def saludo (request):
     return HttpResponse("Hola a todos!")
