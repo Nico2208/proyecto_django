@@ -15,7 +15,7 @@ def index( request ):
         titulo = "Titulo cuando accedo por el metodo GET"
     else:
         titulo = f"Titulo cuando accedo por el metodo {request.method}"
-    return render(request, 'saludo.html', {'titulo': titulo})
+    return render(request, "saludo.html", {'titulo': titulo})
 
 def saludo (request):
     return HttpResponse("Hola a todos!")
