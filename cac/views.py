@@ -15,7 +15,7 @@ def index( request ):
         titulo = "Titulo cuando accedo por el metodo GET"
     else:
         titulo = f"Titulo cuando accedo por el metodo {request.method}"
-    return render(request, "saludo.html", {'titulo': titulo})
+    return render(request, "saludo.html", {'titulo':titulo})
 
 def saludo (request):
     return HttpResponse("Hola a todos!")
@@ -50,4 +50,4 @@ def quienes_somos( request ):
     return redirect( reverse( "saludar", kwargs={ "nombre": "Nicolas" } ) )
 
 def index_saludo(request):
-    return render(request, "index.html", {"nombre": "Nicolas"})
+    return render(request, "index.html", {"nombre":"Nicolas"})
