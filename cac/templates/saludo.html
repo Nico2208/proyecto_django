@@ -8,5 +8,15 @@
 </head>
 <body>
     <h1 style="color:blue">{{titulo}}</h1>
+    <div>
+        <h3>Listado de cursos</h3>
+    </div>
+    <ul>
+        {% for curso in listado %}
+        <li>
+            {{curso.nombre}} - {{curso.descripcion}}
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

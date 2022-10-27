@@ -4,6 +4,8 @@ from django.http import HttpResponse
 
 from django.urls import reverse
 
+from django.template import loader
+
 # Create your views here.
 
 #views.py contiene toda la logica del negocio.
@@ -15,7 +17,21 @@ def index( request ):
         titulo = "Titulo cuando accedo por el metodo GET"
     else:
         titulo = f"Titulo cuando accedo por el metodo {request.method}"
-    return render(request, "saludo.html", {'titulo':titulo})
+    listado_cursos = [
+        {
+            'nombre': 'fullstack Java',
+            'descripcion': 'curso desarrollador fullstack'
+        },
+        {
+            'nombre': 'Diseño UX/UI',
+            'descripcion': 'curso diseño'
+        },
+        {
+            'nombre': 'Big Data',
+            'descripcion': 'curso analisis de datos'
+        }
+    ]
+    return render(request, "saludo.html", {'titulo':titulo, 'listado': listado_cursos})
 
 def saludo (request):
     return HttpResponse("Hola a todos!")
