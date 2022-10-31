@@ -67,3 +67,23 @@ def quienes_somos( request ):
 
 def index_saludo(request):
     return render(request, "index.html", {"nombre":"Nicolas"})
+
+def ver_proyectos( request, anio=2022, mes=1 ):
+
+    listado_cursos = [
+        {
+            'nombre': 'fullstack Java',
+            'descripcion': 'curso desarrollador fullstack'
+        },
+        {
+            'nombre': 'Diseño UX/UI',
+            'descripcion': 'curso diseño'
+        },
+        {
+            'nombre': 'Big Data',
+            'descripcion': 'curso analisis de datos'
+        }
+    ]
+
+    return render( request, 'cursos.html', {'cursos': listado_cursos} )
+

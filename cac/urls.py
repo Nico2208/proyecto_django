@@ -12,7 +12,8 @@ urlpatterns = [
     path("cursos/detalle/<slug:nombre_curso>/", views.cursos_detalle, name='cursos_detalle'),
     re_path(r"^cursos/(?P<nombre_categoria>\w{1,4})/$", views.curso, name='cursos'),
     path("quienessomos/", views.quienes_somos, name="quienes_somos"),
-    path('holamundo/', views.index_saludo, name="index" )
+    path('holamundo/', views.index_saludo, name="index" ),
+    path('cursos/', views.ver_proyectos, name='cursos')
 ]
 
  
